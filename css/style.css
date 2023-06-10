@@ -1,55 +1,25 @@
 @font-face {
-  font-family: "Montserrat";
-  src: url("Montserrat-ExtraBold.eot");
-  src: local("Montserrat ExtraBold"), local("Montserrat-ExtraBold"),
-    url("../fonts/MontserratExtraBold.woff2") format("woff2"),
-    url("../fonts/MontserratExtraBold.woff") format("woff");
+  font-family: "Muller";
+  src: url("../fonts/MullerBold.woff2") format("woff2"),
+    url("../fonts/MullerBold.woff") format("woff");
   font-display: swap;
-  font-weight: 800;
+  font-weight: 700;
   font-style: normal;
 }
-
 @font-face {
-  font-family: "Montserrat";
-  src: url("Montserrat-Bold.eot");
-  src: local("Montserrat Bold"), local("Montserrat-Bold"),
-    url("../fonts/MontserratBold.woff2") format("woff2"),
-    url("../fonts/MontserratBold.woff") format("woff");
-  font-display: swap;
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("Montserrat-SemiBold.eot");
-  src: local("Montserrat SemiBold"), local("MontserratSemiBold"),
-    url("../fonts/MontserratSemiBold.woff") format("woff2"),
-    url("../fonts/MontserratSemiBold.woff") format("woff");
-  font-display: swap;
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("Montserrat-Medium.eot");
-  src: local("Montserrat Medium"), local("Montserrat-Medium"),
-    url("../fonts/MontserratMedium.woff2") format("woff2"),
-    url("../fonts/MontserratMedium.woff") format("woff");
+  font-family: "Muller";
+  src: url("../fonts/MullerMedium.woff2") format("woff2"),
+    url("../fonts/MullerMedium.woff") format("woff");
   font-display: swap;
   font-weight: 500;
   font-style: normal;
 }
-
 @font-face {
-  font-family: "Montserrat";
-  src: url("Montserrat-Regular.eot");
-  src: local("Montserrat Regular"), local("Montserrat-Regular"),
-    url("../fonts/MontserratRegular.woff2") format("woff2"),
-    url("../fonts/MontserratRegular.woff") format("woff");
+  font-family: "Muller";
+  src: url("../fonts/MullerRegular.woff2") format("woff2"),
+    url("../fonts/MullerRegular.woff") format("woff");
   font-display: swap;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -92,6 +62,7 @@ body {
 /* ============= HEADER ============== */
 .header {
   min-height: 80px;
+  margin-bottom: 60px;
   padding: 40px 0;
   background: var(--blue);
 }
@@ -144,27 +115,41 @@ body {
 /*============= Hero ==============*/
 
 .hero-container {
-  min-height: 600px;
+  min-height: 560px;
 }
 
 .hero-inner {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: relative;
   padding: 20px;
-  padding-top: 60px;
+  background: var(--blue);
+  border-radius: 40px;
 }
 
 .hero-img {
-  margin-right: 20px;
+  position: relative;
+  bottom: -120px;
+  right: 50px;
   display: inline-block;
-  width: 500px;
-  height: 560px;
-  border: 1px solid var(--blue);
+  width: 620px;
+  border-radius: 40px;
+  overflow: hidden;
+  height: 500px;
 }
 
+/* .hero-img img {
+  height: 600px;
+} */
+
 .hero-content {
-  width: 50%;
-  color: var(--blue);
+  width: 49%;
+  margin-right: 40px;
+  padding: 28px;
+  border-radius: 40px;
+  color: var(--white);
+  background-color: var(--blue);
 }
 
 .hero__title {
@@ -184,14 +169,18 @@ body {
 
 .contactme {
   margin: 0;
-  margin-bottom: 150px;
+  margin-bottom: 70px;
   padding: 20px 0;
   list-style: none;
 }
 
+.contactme__link:hover {
+  opacity: 0.8;
+}
+
 .contactme__link {
   font-size: 24px;
-  color: var(--blue);
+  color: var(--white);
 }
 
 .contactme__link:not(:last-child) {
@@ -220,12 +209,12 @@ body {
   border-radius: 10px;
   border: 1px solid transparent;
   font-size: 32px;
-  color: var(--blue);
+  color: var(--white);
 }
 
 .social-item:hover {
-  opacity: 0.7;
-  border: 1px solid rgb(0 15 94 / 52%);
+  opacity: 0.8;
+  border: 1px solid rgb(255 255 255 / 75%);
 }
 
 /*============= About ==============*/
@@ -243,8 +232,9 @@ body {
   position: relative;
   margin: 0;
   margin-bottom: 60px;
-  font-weight: 600;
-  font-size: 36px;
+  font-weight: 800;
+  font-size: 60px;
+  color: var(--blue);
 }
 
 /* .about__title::after {
@@ -384,7 +374,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  color: var(--yellow);
+  color: rgba(197, 207, 255, 0.62);
   text-align: center;
   font-weight: 700;
   font-size: 80px;
@@ -624,7 +614,7 @@ body {
     margin-right: 0;
     margin-bottom: 30px;
     width: 300px;
-    height: 300px;
+    height: 600px;
   }
 
   .hero__title {
