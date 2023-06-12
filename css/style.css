@@ -116,6 +116,7 @@ body {
 
 .hero-container {
   min-height: 560px;
+  padding: 20px;
 }
 
 .hero-inner {
@@ -123,7 +124,7 @@ body {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding: 20px;
+  /* padding: 20px; */
   background: var(--blue);
   border-radius: 40px;
 }
@@ -137,11 +138,8 @@ body {
   border-radius: 40px;
   overflow: hidden;
   height: 500px;
+  font-size: 0;
 }
-
-/* .hero-img img {
-  height: 600px;
-} */
 
 .hero-content {
   width: 49%;
@@ -552,7 +550,14 @@ body {
   }
 
   .hero-content {
-    width: 60%;
+    width: 69%;
+  }
+
+  .hero-img {
+    width: 49%;
+    height: 100%;
+    bottom: -190px;
+    right: 30px;
   }
 
   .about_inner {
@@ -602,19 +607,32 @@ body {
     overflow: hidden;
   }
 
+  .header {
+    margin-bottom: 10px;
+  }
+
   .nav__item {
     font-size: 20px;
   }
 
+  .hero-container {
+    min-height: 500px;
+  }
+
   .hero-inner {
-    flex-direction: column;
+    position: static;
+    padding: 60px 20px;
+  }
+
+  .hero-content {
+    margin-right: 0;
+    width: 70%;
+    padding: 0;
   }
 
   .hero-img {
-    margin-right: 0;
-    margin-bottom: 30px;
-    width: 300px;
-    height: 600px;
+    position: static;
+    border-radius: 20px;
   }
 
   .hero__title {
@@ -629,7 +647,7 @@ body {
   }
 
   .contactme {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 
   .contactme__link {
@@ -678,13 +696,13 @@ body {
   .hobby__subtitle {
     font-size: 22px;
   }
-  /* 
-  .works-container {
-    min-height: 870px;
-  } */
 
   .dropdown-list {
     min-height: 200px;
+  }
+
+  .works-container {
+    padding-top: 40px;
   }
 
   .works__title {
@@ -697,7 +715,7 @@ body {
   }
 
   .work {
-    width: 70%;
+    width: 95%;
     margin-right: 0;
   }
 }
@@ -705,6 +723,7 @@ body {
 @media (max-width: 576px) {
   .header {
     min-height: 64px;
+    margin-bottom: 2px;
   }
 
   .nav {
@@ -719,13 +738,23 @@ body {
     font-size: 13px;
   }
 
-  .hero-img {
-    width: 280px;
-    height: 280px;
+  .hero-container {
+    min-height: 380px;
   }
 
-  .contactme {
-    margin-bottom: 80px;
+  .hero-inner {
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+
+  .hero-img {
+    width: 60%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+  }
+
+  .hero-content {
+    width: 100%;
   }
 
   .contactme__link {
@@ -750,6 +779,10 @@ body {
 
   .social-item {
     font-size: 22px;
+  }
+
+  .education, .experience {
+    padding: 20px;
   }
 
   .hobby__subtitle {
